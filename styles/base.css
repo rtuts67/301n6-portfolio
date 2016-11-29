@@ -1,0 +1,30 @@
+
+body {
+  background-image: url('../assets/background2.jpg');
+  background-size: cover;
+  font-family: 'Quicksand', sans-serif;
+  color: #7f9b8b;
+}
+
+h1 {
+  font-family: 'Quicksand', sans-serif;
+  color: #7f9b8b;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.2em;
+  color: #7f9b8b;
+}
+
+a {
+    color: #1a9983;
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+
+a:hover {
+    color: #7b991a;
+}
