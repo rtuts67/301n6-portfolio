@@ -12,24 +12,32 @@
   <header>
     <section>
     <h1>A Glimpse Into My Background</h1>
-    <section id="navbar">
     <nav class="navigation">
-      <ul id="ulnav">
-          <li id="left"><a href="index.html" id="button-home">Home</a></li>
-          <li id="middle"><a href="about.html" id="button-aboutme">About</a></li>
-          <li id="right"><a href="#" data-content"projects">Projects</a></li>
+      <ul>
+          <li id="left" class="navigation-item" data-content="Home"><a href="#">Home</a></li>
+          <li id="middle" class="navigation-item" data-content="About"><a href="#">About</a></li>
+          <li id="right" class="navigation-item" data-content="Projects"><a href="#">Projects</a></li>
       </ul>
     </nav>
+  </header>
+  <main id="visible">
+    <section id="Home" class="tab-content">
+      <p>This is my home page!</p>
     </section>
-    <section id="myprojects"></section>
+    <section id="About" class="tab-content">
+      <p>I grew up in Coeur d' Alene, Idaho for 18 years, and I went to college at the University of Montana in Missoula, MT. There, I studied Business-Finance for four years, and I met my husband, Phil. We moved to Denver, CO and we lived there for four years. I audited mortgage-backed securities, and then we moved to Seattle due to Phil pursuing a job at Eddie Bauer. I worked in commercial lending for a year at two different banks; however, I decided I needed a change from the financial industry. I got a job as a Product Data Specialist at C.C. Filson doing product data management and data analytics. I decided to pursue Web Development as my next professional chapter in life, and I am currently learning these skills during evenings at Code Fellows in Seattle. My hobbies include anything outdoors: primarily snowboarding, skiing, hiking, biking, camping, backpacking, wakeboarding, swimming, kayaking, etc. I also enjoy ballet, yoga, jogging, and living a healthy, fit lifestyle in general. Causes I care about inculde: the environment, equal rights, civil rights, and more.</p>
+    </section>
+    <section id="Projects" class="tab-content">
     <article class="template">
-      <h1 id="project-name"></h1>
+      <a href="" id="project-name"></a>
       <p id="description"></p>
       <p id="languages"></p>
     </article>
-  </header>
+  </section>
+  </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="projects.js"></script>
+<script src="view.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

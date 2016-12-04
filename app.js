@@ -1,6 +1,6 @@
 'use strict;'
 var allProjects = [];
-//var articleView = {};
+//\var articleView = {};
 function MyProject (proj) {
   this.name = proj.name;
   this.path = proj.path;
@@ -9,13 +9,12 @@ function MyProject (proj) {
 }
 
 MyProject.prototype.toHtml = function() {
-  var $newMyProject = $('article.template').clone();
+  var $newMyProject = $('.template').clone();
+  $newMyProject.find('#project-name').text(this.name);
+  $newMyProject.find('#project-name').attr('href', this.path);
+  $newMyProject.find('#description').text(this.description);
+  $newMyProject.find('#languages').text(this.languages);
   $newMyProject.removeClass('template');
-  $newMyProject.find('project-name').text(this.name);
-  $newMyProject.find('project-name').attr('href',this.path);
-  $newMyProject.find('description').text(this.description);
-  $newMyProject.find('languages').text(this.languages);
-  $('#myprojects').append(this);
   return $newMyProject;
 };
 
@@ -24,8 +23,9 @@ myLocalProjects.forEach(function(currentArticleObj) {
 });
 
 allProjects.forEach(function(project) {
-  $('#myprojects').append(project.toHtml());
+  $('#Projects').append(project.toHtml());
 });
+
 
 //articleView.populateli = function() {
 //  $('article').not('.template').each(function() {

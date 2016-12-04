@@ -1,11 +1,15 @@
+.tab-content {
+  display: none;
+}
 .navigation {
   max-width: 300px;
 }
-.navigation ul {
+.navigation {
   display:block;
+  margin: 0 auto;
 }
 
-.navigation li {
+.navigation-item {
 display: inline;
 }
 
