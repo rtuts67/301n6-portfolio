@@ -1,5 +1,6 @@
 'use strict';
 var handleTheNavMenue = function() {
+  $('#visible').show();
   $('.navigation').on('click', '.navigation-item', function(e) {
     $('.tab-content').hide();
     $(`#${$(this).data('content')}`).fadeIn(400);

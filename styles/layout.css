@@ -1,3 +1,6 @@
+.tab-content {
+  display: none;
+}
 .navigation {
   max-width: 300px;
 }

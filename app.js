@@ -23,7 +23,7 @@ myLocalProjects.forEach(function(currentArticleObj) {
 });
 
 allProjects.forEach(function(project) {
-  $('#myprojects').append(project.toHtml());
+  $('#Projects').append(project.toHtml());
 });
 
 
