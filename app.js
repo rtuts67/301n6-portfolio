@@ -26,6 +26,7 @@ allProjects.forEach(function(project) {
   $('#myprojects').append(project.toHtml());
 });
 
+
 //articleView.populateli = function() {
 //  $('article').not('.template').each(function() {
 //    var name, description, languages, ptag;
