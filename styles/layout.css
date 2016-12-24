@@ -1,0 +1,37 @@
+.tab-content {
+  display: none;
+}
+.navigation {
+  max-width: 300px;
+}
+.navigation {
+  display:block;
+  margin: 0 auto;
+}
+
+.navigation-item {
+display: inline;
+}
+
+ #right {
+  float: right;
+}
+
+#middle {
+  padding-left: 37px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#left {
+  float: left;
+}
+
+#about-me p {
+  margin-top: 90px;
+  background-color: #bccfd6;
+  opacity: .75;
+  color: black;
+  font-size: 1.2em;
+  font-weight: bolder;
+}
