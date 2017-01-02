@@ -9,13 +9,9 @@ function MyProject (proj) {
 }
 
 MyProject.prototype.toHtml = function() {
-  var $newMyProject = $('.template').clone();
-  $newMyProject.find('#project-name').text(this.name);
-  $newMyProject.find('#project-name').attr('href', this.path);
-  $newMyProject.find('#description').text(this.description);
-  $newMyProject.find('#languages').text(this.languages);
-  $newMyProject.removeClass('template');
-  return $newMyProject;
+  var htmlTemplate = $('#template').html();
+  var template = Handlebars.compile(htmlTemplate);
+  return template(this);
 };
 
 myLocalProjects.forEach(function(currentArticleObj) {
