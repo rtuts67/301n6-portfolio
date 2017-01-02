@@ -1,17 +1,6 @@
 .tab-content {
   display: none;
 }
-.navigation {
-  max-width: 300px;
-}
-.navigation {
-  display:block;
-  margin: 0 auto;
-}
-
-.navigation-item {
-display: inline;
-}
 
  #right {
   float: right;
@@ -27,11 +16,39 @@ display: inline;
   float: left;
 }
 
-#about-me p {
-  margin-top: 90px;
+#visible {
+  font-size: 1em;
+  font-weight: bold;
+  max-width: 750px;
+}
+
+#Home {
   background-color: #bccfd6;
   opacity: .75;
-  color: black;
-  font-size: 1.2em;
-  font-weight: bolder;
+  font-size: 1em;
+  font-weight: bold;
+  max-width: 750px;
+  min-height: 500px;
+}
+
+#About {
+  background-color: #bccfd6;
+  opacity: .75;
+  font-size: 1em;
+  font-weight: bold;
+  max-width: 750px;
+  min-height: 500px;
+}
+
+#Projects {
+  background-color: #bccfd6;
+  opacity: .75;
+  font-size: 1em;
+  font-weight: bold;
+  max-width: 750px;
+  min-height: 500px;
+}
+
+#Projects a {
+  font-size: 1em;
 }

@@ -1,0 +1,10 @@
+.navigation {
+  max-width: 300px;
+}
+.navigation {
+  display:block;
+  margin: 0 auto;
+}
+.navigation-item {
+display: inline;
+}

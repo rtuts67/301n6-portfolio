@@ -1,5 +1,5 @@
 'use strict;'
-var lang = ['JavaScript', 'HTML5', 'CSS3']
+var lang = ['JavaScript ', ' HTML5 ', ' CSS3']
 var myLocalProjects = [
   {
     name: 'Rosemary Tuttle Guessing Game',
