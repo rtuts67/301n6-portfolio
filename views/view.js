@@ -5,7 +5,13 @@ var handleTheNavMenue = function() {
     $('.tab-content').hide();
     $(`#${$(this).data('content')}`).fadeIn(400);
   });
-  ('.navigation .navigation-item:first').click();
+  $('.navigation .navigation-item:first').click();
 };
 
+var showProjects = function () {
+  MyProject.allProjects.forEach(function(proj) {
+    $('#Projects').append(proj.toHtml())
+  });
+}
 handleTheNavMenue();
+showProjects();

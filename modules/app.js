@@ -17,8 +17,8 @@
     return template(this);
   };
 
-  MyProject.loadAll = function(proj) {
-    proj.forEach(function(currentProj) {
+  MyProject.loadAll = function(project) {
+    project.forEach(function(currentProj) {
       MyProject.allProjects.push(new MyProject(currentProj));
     });
   }
@@ -28,9 +28,10 @@
       var lStorageMyProjects = JSON.parse(localStorage.getItem('projects'));
       MyProject.loadAll(lStorageMyProjects)
     } else {
-      $.getJSON('projects.json').then(
-        function(fancydata) {
-          localStorage.setItem('project', JSON.stringify(fancydata))
+      $.getJSON('./data/projects.json').then(
+        function(data) {
+          localStorage.setItem('projects', JSON.stringify(data))
+          MyProject.loadAll(data);
         }
       );
     }
