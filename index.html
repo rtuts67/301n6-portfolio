@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="styles/base.css" type="text/css" rel="stylesheet">
     <link href="styles/layout.css" type="text/css" rel="stylesheet">
+    <link href="styles/modules.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <script id="template" type="text/x-handlebars-template">
+    <article>
+      <p id="name">Project: <a target="_blank" href="{{filepath}}">{{name}}</a></p>
+      <p id="description">{{description}}</p>
+      <p id="languages">Langages Used: {{languages}}</p>
+    </article>
+  </script>
     <title>Rosemary Tuttle's Website</title>
   </head>
   <body>
@@ -22,22 +30,26 @@
   </header>
   <main id="visible">
     <section id="Home" class="tab-content">
-      <p>This is my home page!</p>
+      <p>Welcome to my home page!</p>
+      <p>Where to reach me:</p>
+      <p>Email: rosemary.brinton@gmail.com</p>
+      <p>Phone: 208-818-4893</p>
+      <p>Location: Seattle, WA</p>
+      <p>&copy Rosemary Tuttle Portfolio</p>
+    </ul>
     </section>
     <section id="About" class="tab-content">
-      <p>I grew up in Coeur d' Alene, Idaho for 18 years, and I went to college at the University of Montana in Missoula, MT. There, I studied Business-Finance for four years, and I met my husband, Phil. We moved to Denver, CO and we lived there for four years. I audited mortgage-backed securities, and then we moved to Seattle due to Phil pursuing a job at Eddie Bauer. I worked in commercial lending for a year at two different banks; however, I decided I needed a change from the financial industry. I got a job as a Product Data Specialist at C.C. Filson doing product data management and data analytics. I decided to pursue Web Development as my next professional chapter in life, and I am currently learning these skills during evenings at Code Fellows in Seattle. My hobbies include anything outdoors: primarily snowboarding, skiing, hiking, biking, camping, backpacking, wakeboarding, swimming, kayaking, etc. I also enjoy ballet, yoga, jogging, and living a healthy, fit lifestyle in general. Causes I care about inculde: the environment, equal rights, civil rights, and more.</p>
+      <p>I grew up in Coeur d' Alene, Idaho for 18 years, and I went to college at the University of Montana in Missoula, MT. There, I studied Business-Finance for four years, and I met my husband, Phil.</p>
+      <p>We moved to Denver, CO and we lived there for four years. I audited mortgage-backed securities, and then we moved to Seattle due to Phil pursuing a job at Eddie Bauer. I worked in commercial lending for a year at two different banks; however, I decided I needed a change from the financial industry. I got a job as a Product Data Specialist at C.C. Filson doing product data management and data analytics.</p>
+      <p> I decided to pursue Web Development as my next professional chapter in life, and I am currently learning these skills during evenings at Code Fellows in Seattle.</p>
+      <p>My hobbies include anything outdoors: primarily snowboarding, skiing, hiking, biking, camping, backpacking, wakeboarding, swimming, kayaking, etc. I also enjoy ballet, yoga, jogging, and living a healthy, fit lifestyle in general. Causes I care about inculde: the environment, equal rights, civil rights, and more.</p>
     </section>
     <section id="Projects" class="tab-content">
-    <article class="template">
-      <a href="" id="project-name"></a>
-      <p id="description"></p>
-      <p id="languages"></p>
-    </article>
   </section>
   </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="projects.js"></script>
-<script src="view.js"></script>
-<script src="app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+<script src="/modules/app.js"></script>
+<script src="/views/view.js"></script>
 </body>
 </html>
