@@ -4,7 +4,7 @@
 
   function MyProject (proj) {
     this.name = proj.name;
-    this.filepath = proj.path;
+    this.filepath = proj.filepath;
     this.description = proj.description;
     this.languages = proj.languages;
   }
