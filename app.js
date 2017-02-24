@@ -22,7 +22,23 @@
       MyProject.allProjects.push(new MyProject(currentProj));
     });
   }
-  MyProject.loadAll();
+
+  MyProject.getAll = function() {
+    if (localStorage.projects) {
+      var lStorageMyProjects = JSON.parse(localStorage.getItem('projects'));
+      MyProject.loadAll(lStorageMyProjects)
+    } else {
+      $.getJSON('projects.json').then(
+        function(fancydata) {
+          localStorage.setItem('project', JSON.stringify(fancydata))
+        }
+      );
+    }
+  };
+
+  MyProject.getAll();
+  module.MyProject = MyProject;
+  //MyProject.loadAll();
   //MyProject.allProjects.forEach(function(project) {
     //$('#Projects').append(project.toHtml());
 })(window);
