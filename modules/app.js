@@ -27,8 +27,8 @@
   //}
     project.forEach(function(currentProj) {
       MyProject.allProjects.push(new MyProject(currentProj));
-      MyProject.allProjects.map(function (currentnewProj) {
-        return currentnewProj.names
+      return MyProject.allProjects.map(function (currentnewProj) {
+        return currentnewProj.name
       })
     });
   }
