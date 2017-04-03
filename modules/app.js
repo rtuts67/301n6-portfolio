@@ -30,7 +30,7 @@
   //    })
   //    console.log(namesOnly)
     //});
-    TODO: add a reduce
+    //TODO: add a reduce
   }
 
   MyProject.getAll = function() {
