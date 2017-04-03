@@ -6,10 +6,6 @@
     for (let keys in proj) {
       this[keys] = proj[keys]
     }
-    //this.name = proj.name;
-    //this.filepath = proj.filepath;
-    //this.description = proj.description;
-    //this.languages = proj.languages;
   }
 
   MyProject.allProjects = [];
@@ -24,6 +20,8 @@
     project.map(function(ele) {
       MyProject.allProjects.push(new MyProject(ele))
     });
+
+  //replaced for each
   //}
     //project.forEach(function(currentProj) {
     //  MyProject.allProjects.push(new MyProject(currentProj));
@@ -32,6 +30,7 @@
   //    })
   //    console.log(namesOnly)
     //});
+    TODO: add a reduce
   }
 
   MyProject.getAll = function() {
