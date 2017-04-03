@@ -3,10 +3,9 @@
 (function(module) {
 
   function MyProject (proj) {
-    this.name = proj.name;
-    this.filepath = proj.filepath;
-    this.description = proj.description;
-    this.languages = proj.languages;
+    for (let keys in proj) {
+      this[keys] = proj[keys]
+    }
   }
 
   MyProject.allProjects = [];
@@ -18,9 +17,20 @@
   };
 
   MyProject.loadAll = function(project) {
-    project.forEach(function(currentProj) {
-      MyProject.allProjects.push(new MyProject(currentProj));
+    project.map(function(ele) {
+      MyProject.allProjects.push(new MyProject(ele))
     });
+
+  //replaced for each
+  //}
+    //project.forEach(function(currentProj) {
+    //  MyProject.allProjects.push(new MyProject(currentProj));
+  //    var namesOnly = MyProject.allProjects.map(function (currentnewProj) {
+  //      return currentnewProj.name;
+  //    })
+  //    console.log(namesOnly)
+    //});
+    //TODO: add a reduce
   }
 
   MyProject.getAll = function() {
