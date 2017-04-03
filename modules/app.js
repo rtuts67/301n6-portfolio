@@ -3,10 +3,13 @@
 (function(module) {
 
   function MyProject (proj) {
-    this.name = proj.name;
-    this.filepath = proj.filepath;
-    this.description = proj.description;
-    this.languages = proj.languages;
+    for (let keys in proj) {
+      this[keys] = proj[keys]
+    }
+    //this.name = proj.name;
+    //this.filepath = proj.filepath;
+    //this.description = proj.description;
+    //this.languages = proj.languages;
   }
 
   MyProject.allProjects = [];
@@ -18,9 +21,14 @@
   };
 
   MyProject.loadAll = function(project) {
-    project.forEach(function(currentProj) {
-      MyProject.allProjects.push(new MyProject(currentProj));
+    MyProject.allProjects = function(data) {
+      data.map(function(ele) {
+      return new MyProject(ele)
     });
+    }
+    //project.forEach(function(currentProj) {
+      //MyProject.allProjects.push(new MyProject(currentProj));
+    //});
   }
 
   MyProject.getAll = function() {
