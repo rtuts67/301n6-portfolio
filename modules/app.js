@@ -21,16 +21,17 @@
   };
 
   MyProject.loadAll = function(project) {
-    //MyProject.allProjects = proj.map(function(ele) {
-      //return new MyProject(ele)
-    //});
-  //}
-    project.forEach(function(currentProj) {
-      MyProject.allProjects.push(new MyProject(currentProj));
-      return MyProject.allProjects.map(function (currentnewProj) {
-        return currentnewProj.name
-      })
+    project.map(function(ele) {
+      MyProject.allProjects.push(new MyProject(ele))
     });
+  //}
+    //project.forEach(function(currentProj) {
+    //  MyProject.allProjects.push(new MyProject(currentProj));
+  //    var namesOnly = MyProject.allProjects.map(function (currentnewProj) {
+  //      return currentnewProj.name;
+  //    })
+  //    console.log(namesOnly)
+    //});
   }
 
   MyProject.getAll = function() {
