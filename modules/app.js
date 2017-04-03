@@ -20,11 +20,10 @@
     return template(this);
   };
 
-  MyProject.loadAll = function(project) {
-    MyProject.allProjects = function(data) {
-      data.map(function(ele) {
-      return new MyProject(ele)
-    });
+  MyProject.loadAll = function(proj) {
+    MyProject.allProjects = proj.map(function(ele) {
+        return new MyProject(ele)
+      });
     }
     //project.forEach(function(currentProj) {
       //MyProject.allProjects.push(new MyProject(currentProj));
