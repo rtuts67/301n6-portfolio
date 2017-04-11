@@ -47,7 +47,16 @@
     }
   };
 
+  MyProject.displayTheGroupProjects = function(proj) {
+    proj.reduce(function(acc, value) {
+      var groupProject = [3];
+      if (acc === groupProject) {
+        return acc
+      }
+    });
+  }
   MyProject.getAll();
+  MyProject.displayTheGroupProjects();
   module.MyProject = MyProject;
   //MyProject.loadAll();
   //MyProject.allProjects.forEach(function(project) {
