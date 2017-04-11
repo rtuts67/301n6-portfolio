@@ -47,7 +47,19 @@
     }
   };
 
+  MyProject.displayTheGroupProjects = function() {
+    return MyProject.allProjects.map(function(projects2) {
+      return projects2
+    })
+    .reduce(function(acc, curr) {
+      if (acc.indexOf(curr) === -1) {
+        acc.push(curr)
+      }
+      return acc;
+    }, []);
+  }
   MyProject.getAll();
+  MyProject.displayTheGroupProjects();
   module.MyProject = MyProject;
   //MyProject.loadAll();
   //MyProject.allProjects.forEach(function(project) {
