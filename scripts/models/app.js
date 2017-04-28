@@ -20,17 +20,6 @@
     project.map(function(ele) {
       MyProject.allProjects.push(new MyProject(ele))
     });
-
-  //replaced for each
-  //}
-    //project.forEach(function(currentProj) {
-    //  MyProject.allProjects.push(new MyProject(currentProj));
-  //    var namesOnly = MyProject.allProjects.map(function (currentnewProj) {
-  //      return currentnewProj.name;
-  //    })
-  //    console.log(namesOnly)
-    //});
-    //TODO: add a reduce
   }
 
   MyProject.getAll = function() {
@@ -61,7 +50,4 @@
   MyProject.getAll();
   MyProject.displayTheGroupProjects();
   module.MyProject = MyProject;
-  //MyProject.loadAll();
-  //MyProject.allProjects.forEach(function(project) {
-    //$('#Projects').append(project.toHtml());
 })(window);
