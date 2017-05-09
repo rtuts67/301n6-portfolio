@@ -7,11 +7,16 @@
 //   });
 //   $('.navigation .navigation-item:first').click();
 // };
+//handleTheNavMenue();
+function(module) {
+  var projectView = {};
+  MyProject.showProjects = function (data) {
+    MyProject.allProjects.forEach(function(proj) {
+      $('#Projects').append(proj.toHtml())
+    });
+  }
 
-var showProjects = function () {
-  MyProject.allProjects.forEach(function(proj) {
-    $('#Projects').append(proj.toHtml())
-  });
-}
-handleTheNavMenue();
-showProjects();
+  MyProject.getAll()
+
+  module.projectView = projectView;
+})(window);
