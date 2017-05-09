@@ -8,7 +8,7 @@
 //   $('.navigation .navigation-item:first').click();
 // };
 //handleTheNavMenue();
-function(module) {
+(function(module) {
   var projectView = {};
   MyProject.showProjects = function (data) {
     MyProject.allProjects.forEach(function(proj) {
