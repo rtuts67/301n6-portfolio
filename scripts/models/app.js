@@ -17,7 +17,7 @@
   };
 
   MyProject.loadAll = function(project) {
-    project.map(function(ele) {
+    project.forEach(function(ele) {
       MyProject.allProjects.push(new MyProject(ele))
     });
   }
@@ -30,7 +30,8 @@
     } else {
       $.getJSON('./data/projects.json').then(
         function(data) {
-          var lData = localStorage.setItem('projects', JSON.stringify(data))
+          localStorage.setItem('projects', JSON.stringify(data))
+          var lData = JSON.parse(localStorage.getItem('projects'));
           MyProject.loadAll(lData);
           MyProject.showProjects(lData)
         }
