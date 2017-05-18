@@ -30,9 +30,9 @@
     } else {
       $.getJSON('./data/projects.json').then(
         function(data) {
-          localStorage.setItem('projects', JSON.stringify(data))
-          MyProject.loadAll(data);
-          MyProject.showProjects(data)
+          var lData = localStorage.setItem('projects', JSON.stringify(data))
+          MyProject.loadAll(lData);
+          MyProject.showProjects(lData)
         }
       );
     }
