@@ -1,9 +1,9 @@
-const express = require('express');
-const app = express();
-PORT = process.env.PORT || 3000
+var express = require('express'),
+  app = express(),
+  port = process.env.PORT || 3000;
 
-app.use(express.static('./'))
-app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
+app.use(express.static('./'));
 app.get('/', function(req, res) {
-  res.sendFile('index.html', {root: './'})
+  res.sendFile('index.html', {root: '.'});
 })
+app.listen(port, () => console.log('Listening on port' + port));

@@ -26,11 +26,13 @@
     if (localStorage.projects) {
       var lStorageMyProjects = JSON.parse(localStorage.getItem('projects'));
       MyProject.loadAll(lStorageMyProjects)
+      MyProject.showAll(lStorageMyProjects)
     } else {
       $.getJSON('./data/projects.json').then(
         function(data) {
           localStorage.setItem('projects', JSON.stringify(data))
           MyProject.loadAll(data);
+          MyProject.showAll(lStorageMyProjects)
         }
       );
     }
@@ -48,6 +50,6 @@
     }, []);
   }
   MyProject.getAll();
-  MyProject.displayTheGroupProjects();
+  //MyProject.displayTheGroupProjects();
   module.MyProject = MyProject;
 })(window);
