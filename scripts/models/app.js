@@ -50,7 +50,6 @@
       return acc;
     }, []);
   }
-  MyProject.getAll();
   //MyProject.displayTheGroupProjects();
   module.MyProject = MyProject;
 })(window);
