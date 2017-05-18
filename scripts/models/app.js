@@ -26,13 +26,13 @@
     if (localStorage.projects) {
       var lStorageMyProjects = JSON.parse(localStorage.getItem('projects'));
       MyProject.loadAll(lStorageMyProjects)
-      MyProject.showAll(lStorageMyProjects)
+      MyProject.showProjects(lStorageMyProjects)
     } else {
       $.getJSON('./data/projects.json').then(
         function(data) {
           localStorage.setItem('projects', JSON.stringify(data))
           MyProject.loadAll(data);
-          MyProject.showAll(lStorageMyProjects)
+          MyProject.showProjects(data)
         }
       );
     }
