@@ -24,7 +24,13 @@
   {
     "name": "Home Field Advantage",
     "filepath": "https://rtuts67.github.io/Final_Project_HFA_201n6/",
-    "description": "The final project was built for the purpose of helping prospective home-buyers look for a property in Seattle.",
+    "description": "The final 201 project was built for the purpose of helping prospective home-buyers look for a property in Seattle.",
     "languages": "JavaScript."
+  }
+  {
+    "name": "Narcan Samaritan",
+    "filepath": "https://final-project-301.herokuapp.com/",
+    "description": "The final 301 project was built for educational purposes only to help connect registered carriers of Narcan with reports of OD.",
+    "languages": "JavaScript, SQL, JQuery, JSON."
   }
 ]
