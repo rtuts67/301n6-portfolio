@@ -4,7 +4,7 @@
   var aboutController = {};
 
   aboutController.show = function () {
-    $('#Home').fadeIn(1000)
+    $('#Home').hide();
     $('#About').fadeIn(1000);
     $('#Projects').hide();
 

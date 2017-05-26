@@ -5,8 +5,8 @@
 
   homeController.show = function () {
     $('#About').hide();
-    $('#Projects').hide();
     $('#Home').fadeIn(1000)
+    $('#Projects').hide();
   };
 
   module.homeController = homeController;
