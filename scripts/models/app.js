@@ -17,31 +17,23 @@
   };
 
   MyProject.loadAll = function(project) {
-    project.map(function(ele) {
+    project.forEach(function(ele) {
       MyProject.allProjects.push(new MyProject(ele))
     });
-
-  //replaced for each
-  //}
-    //project.forEach(function(currentProj) {
-    //  MyProject.allProjects.push(new MyProject(currentProj));
-  //    var namesOnly = MyProject.allProjects.map(function (currentnewProj) {
-  //      return currentnewProj.name;
-  //    })
-  //    console.log(namesOnly)
-    //});
-    //TODO: add a reduce
   }
 
   MyProject.getAll = function() {
     if (localStorage.projects) {
       var lStorageMyProjects = JSON.parse(localStorage.getItem('projects'));
       MyProject.loadAll(lStorageMyProjects)
+      MyProject.showProjects(lStorageMyProjects)
     } else {
       $.getJSON('./data/projects.json').then(
         function(data) {
           localStorage.setItem('projects', JSON.stringify(data))
-          MyProject.loadAll(data);
+          var lData = JSON.parse(localStorage.getItem('projects'));
+          MyProject.loadAll(lData);
+          MyProject.showProjects(lData)
         }
       );
     }
@@ -58,10 +50,6 @@
       return acc;
     }, []);
   }
-  MyProject.getAll();
-  MyProject.displayTheGroupProjects();
+  //MyProject.displayTheGroupProjects();
   module.MyProject = MyProject;
-  //MyProject.loadAll();
-  //MyProject.allProjects.forEach(function(project) {
-    //$('#Projects').append(project.toHtml());
 })(window);

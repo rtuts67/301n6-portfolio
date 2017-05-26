@@ -22,21 +22,20 @@
     <h1>A Glimpse Into My Background</h1>
     <nav class="navigation">
       <ul>
-          <li id="left" class="navigation-item" data-content="Home"><a href="#">Home</a></li>
-          <li id="middle" class="navigation-item" data-content="About"><a href="#">About</a></li>
-          <li id="right" class="navigation-item" data-content="Projects"><a href="#">Projects</a></li>
+          <li id="left" class="navigation-item" data-content="Home"><a href="/">Home</a></li>
+          <li id="middle" class="navigation-item" data-content="About"><a href="/About">About</a></li>
+          <li id="right" class="navigation-item" data-content="Projects"><a href="/Projects">Projects</a></li>
       </ul>
     </nav>
   </header>
-  <main id="visible">
+  <main>
     <section id="Home" class="tab-content">
       <p>Welcome to my home page!</p>
       <p>Where to reach me:</p>
       <p>Email: rosemary.brinton@gmail.com</p>
       <p>Phone: 208-818-4893</p>
       <p>Location: Seattle, WA</p>
-      <p>&copy Rosemary Tuttle Portfolio</p>
-    </ul>
+      <p>&copy; Rosemary Tuttle Portfolio</p>
     </section>
     <section id="About" class="tab-content">
       <p>I grew up in Coeur d' Alene, Idaho for 18 years, and I went to college at the University of Montana in Missoula, MT. There, I studied Business-Finance for four years, and I met my husband, Phil.</p>
@@ -47,9 +46,14 @@
     <section id="Projects" class="tab-content">
   </section>
   </main>
+<script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-<script src="/modules/app.js"></script>
-<script src="/views/view.js"></script>
+<script src="scripts/models/app.js"></script>
+<script src="scripts/views/view.js"></script>
+<script src="scripts/controllers/homeController.js"></script>
+<script src="scripts/controllers/aboutController.js"></script>
+<script src="scripts/controllers/projectController.js"></script>
+<script src="scripts/controllers/routes.js"></script>
 </body>
 </html>
